@@ -6,9 +6,8 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', fn() => view('index'))->name('landing');
-Route::get('/contact', [App\Http\Controllers\Admin\MessageController::class, 'create'])->name('contact.create');
-Route::post('/contact', [App\Http\Controllers\Admin\MessageController::class, 'store'])->name('contact.store');
-
+Route::get('/contact', [App\Http\Controllers\MessageController::class, 'create'])->name('contact.create');
+Route::post('/contact', [App\Http\Controllers\MessageController::class, 'store'])->name('contact.store');
 
 Route::get('/dashboard', function () {
   $user = Auth::user();
@@ -20,8 +19,8 @@ Route::middleware(['auth'])
   ->as('user.')
   ->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
-    Route::resource('invitations', App\Http\Controllers\InvitationController::class);
     Route::get('/invitations/{invitation}/success', [App\Http\Controllers\InvitationController::class, 'success'])->name('invitations.success');
+    Route::resource('invitations', App\Http\Controllers\InvitationController::class);
   });
 
 Route::middleware(['auth', 'role:admin'])
