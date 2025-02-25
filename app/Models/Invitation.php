@@ -18,12 +18,18 @@ class Invitation extends Model
   protected $fillable = [
     'bride_name',
     'groom_name',
-    'bride_parent_name',
-    'groom_parent_name',
+    'bride_fullname',
+    'groom_fullname',
+    'bride_parent',
+    'groom_parent',
     'date',
-    'location',
     'time',
+    'location',
+    'address',
+    'video',
     'theme',
+    'bride_photo',
+    'groom_photo',
   ];
 
   /**

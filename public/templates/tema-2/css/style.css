@@ -1,0 +1,1355 @@
+/* Variables */
+:root {
+  --gold: #cc8402;
+  --primary: #cc8402;
+  --footer-color: #20342c;
+  --white: #ffffff;
+  --black: black;
+  --bg-color: #274035;
+  --border-color: #3a614f;
+  --bg-opacity-color: rgba(8, 32, 21, 0.883);
+}
+
+body {
+  background-color: var(--bg-color) !important;
+  color: white !important;
+  font-size: 14px !important;
+  font-family: "Kurale" !important;
+}
+
+.vl {
+  border-left: 2px solid var(--primary);
+  height: 50px;
+}
+
+/* FOOTER */
+.section-footer {
+  background-color: var(--footer-color);
+  padding: 50px 50px 120px 50px;
+  color: var(--primary) !important;
+}
+/* END FOOTER */
+
+.hidden {
+  display: none;
+}
+
+.navigation-bar {
+  position: fixed;
+  bottom: 20px;
+  width: auto;
+  background: rgb(8, 32, 21) !important;
+  border: var(--border-color) !important;
+  margin: 0 auto;
+  border-radius: 6px;
+  box-shadow: rgba(252, 226, 166, 0.2) 0px 8px 24px !important;
+  z-index: 10 !important;
+}
+
+.music-button {
+  padding: 2px 4px 4px 4px !important;
+  bottom: 40px !important;
+  left: 1% !important;
+  position: fixed !important;
+  background-color: var(--gold) !important;
+  width: auto !important;
+  z-index: 10 !important;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: rgba(252, 226, 166, 0.2) 0px 8px 24px !important;
+}
+
+.navigation-bar .list-items {
+  list-style: none;
+  text-align: center;
+  height: 100%;
+  padding-left: 0 !important;
+}
+
+.navigation-bar .list-items .item {
+  display: inline-block;
+  height: 4rem;
+}
+
+.navigation-bar .list-items .item .link {
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  height: 100%;
+}
+.navigation-bar .list-items .item .link:hover {
+  color: var(--gold);
+  filter: invert(46%) sepia(99%) saturate(503%) hue-rotate(3deg) brightness(97%)
+    contrast(98%);
+}
+rect:hover {
+  fill: #ff0000; /* changes the color to red */
+}
+.navigation-bar .list-items .item.active .link {
+  color: var(--gold);
+}
+/* END NAVIGATION BAR */
+
+.section-header {
+  height: 100vh !important;
+  /* background-color: pink !important; */
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.illustration1 {
+  background-image: url("../images/illustations/1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top left;
+  width: 40%;
+  height: 40%;
+  top: 0px !important;
+  left: 0px !important;
+  position: absolute;
+}
+.illustration2 {
+  background-image: url("../images/illustations/2.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain;
+  width: 40%;
+  height: 40%;
+  top: 0px !important;
+  right: 0px !important;
+  position: absolute;
+}
+.illustration3 {
+  background-image: url("../images/illustations/3.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom left;
+  width: 40%;
+  height: 40%;
+  bottom: 0px !important;
+  left: 0px !important;
+  position: absolute;
+}
+.illustration4 {
+  background-image: url("../images/illustations/4.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom right;
+  width: 40%;
+  height: 40%;
+  bottom: 0px !important;
+  right: 0px !important;
+  position: absolute;
+}
+
+.illustration5 {
+  background-image: url("../images/illustations/8.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 16/7;
+}
+.center-illustration {
+  width: 70%;
+  position: absolute;
+  margin: auto;
+}
+
+.section-text-illustration5 {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.bridal-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+}
+.section-text-illustration5 div {
+  margin: auto;
+}
+
+.man-name {
+  padding-bottom: 30%;
+}
+.woman-name {
+  padding-top: 30%;
+}
+
+.center-content {
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-content-subtitle {
+  width: 100%;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dancing-text-head {
+  font-size: 64px;
+  font-family: "Dancing Script";
+}
+
+.dancing-text {
+  font-family: "Dancing Script";
+}
+
+.heading-text-small {
+  font-size: 30px !important;
+}
+.heading-text-lg {
+  font-size: 50px !important;
+}
+.text-md {
+  font-size: 18px !important;
+}
+.text-lg {
+  font-size: 24px !important;
+}
+.text-xl {
+  font-size: 3vw !important;
+}
+.text-sm {
+  font-size: 16px !important;
+}
+.full-width {
+  width: 100%;
+}
+
+.kurale-text {
+  font-size: 18px;
+  font-family: "Kurale";
+}
+#mempelai {
+  padding-top: 120px;
+}
+.section-bg1 {
+  background-image: url("../images/background/bg3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.section-bg2 {
+  background-image: url("../images/background/bg3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+}
+.section-bg4 {
+  background-image: url("../images/background/bg2.png"),
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    );
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  /* Set height for demonstration */
+  position: relative;
+  /* Make sure position is relative for absolute positioning */
+}
+.section-bg3 {
+  background-color: var(--bg-color);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.section-bg5 {
+  background-color: var(--bg-color) !important;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.bg-opacity {
+  background-color: var(--bg-opacity-color);
+  /* Set background color with opacity */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* Stretch the background color to cover the entire element */
+}
+.content {
+  position: relative;
+  z-index: 1;
+  /* Ensure the content appears above the background */
+}
+
+.title-white {
+  font-family: "Dancing Script";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  margin-bottom: 32px;
+}
+
+.subtitle-white {
+  text-align: center;
+  font-family: "Lora";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  margin-bottom: 16px;
+}
+
+.mb-32 {
+  margin-bottom: 32px;
+}
+
+.text-normal {
+  font-family: "Lora";
+  font-size: 14px;
+}
+.text-md {
+  font-family: "Lora";
+  font-size: 18px;
+}
+
+.bridal_photo {
+  width: 261px;
+  height: 320px;
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+  object-fit: cover;
+}
+
+.section-bridal-left {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+.section-bridal-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-bridal-right {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+}
+
+.illustration-bridal-left {
+  /* background-image: url("../images/illustations/bridal1.png"); */
+  /* background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  background-size: auto;
+  background-clip: content-box; */
+}
+
+.illustration-bridal-right {
+  /* background-image: url("../images/illustations/bridal2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  background-size: auto; */
+}
+
+.text-gold {
+  color: var(--gold);
+}
+
+.bg-gold {
+  background-color: var(--gold);
+}
+
+.btn-color-main {
+  background-color: var(--gold);
+  padding: 10px 50px;
+  color: #fff;
+  border: 1px solid var(--gold);
+  width: auto;
+  border-radius: 5px;
+  font-style: normal;
+  font-family: "Kurale";
+}
+
+.btn-gold {
+  background-color: var(--gold);
+  padding: 10px 50px;
+  color: #fff;
+  border: 1px solid var(--gold);
+  width: auto;
+  border-radius: 5px;
+  font-style: normal;
+  font-family: "Kurale";
+}
+.btn-gold-full-width {
+  background-color: var(--gold);
+  padding: 10px 50px;
+  color: #fff;
+  border: 1px solid var(--gold);
+  width: 100%;
+  border-radius: 5px;
+  font-style: normal;
+  font-family: "Kurale";
+}
+
+.border-top-template {
+  border-top: 1px ridge #6a6a6a;
+}
+.space-bottom {
+  margin-bottom: 30px;
+}
+.mt-100 {
+  margin-top: 100px;
+}
+
+/* Styling */
+
+.label {
+  padding: 3px 10px;
+  line-height: 13px;
+  color: #ffffff;
+  font-weight: 400;
+  border-radius: 4px;
+  font-size: 75%;
+}
+
+.round {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #512da8;
+  font-size: 35px;
+  color: #fff;
+  text-align: center;
+  line-height: 150px;
+  margin: 20px 0;
+}
+
+.ml-10px {
+  margin-left: 10px;
+}
+
+.label-info {
+  background-color: #1976d2;
+}
+
+.label-success {
+  background-color: green;
+}
+
+.label-danger {
+  background-color: #ef5350;
+}
+
+.action-icons a {
+  padding-left: 7px;
+  vertical-align: middle;
+  color: #99abb4;
+}
+
+.action-icons a:hover {
+  color: #1976d2;
+}
+
+.mt-100 {
+  margin-top: 100px;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+}
+/* ------------------------------------------ */
+/* SECTION BRIDAL */
+.container-bridal {
+  background-image: url("../images/illustations/bridal1.png"),
+    url("../images/illustations/bridal2.png");
+  background-repeat: no-repeat;
+  background-position: 20% 60%, 80% 60%;
+  background-size: auto;
+}
+/* END SECTION BRIDAL */
+/* ------------------------------------------ */
+
+/* SECTION COUNTDOWN */
+.container-countdown {
+  display: flex;
+  padding: 20px 0;
+  justify-content: center;
+}
+.card-countdown {
+  border-top-left-radius: 40%;
+  border-top-right-radius: 40%;
+  border: 1px solid var(--primary);
+  padding: 50px 50px;
+  margin: 0 1rem;
+  height: 100%;
+  min-width: 150px;
+  min-width: 180px;
+}
+
+.header-countdown {
+  font-family: "Dancing Script";
+  font-size: 50px;
+}
+.content-countdown {
+  font-family: "Dancing Script";
+  font-size: 24px;
+}
+/* END SECTION COUNTDOWN */
+
+/* SECTION LOKASI */
+.container-map {
+  background-image: url("../images/illustations/6.png"),
+    url("../images/illustations/9.png");
+  background-repeat: no-repeat;
+  background-position: 0% 90%, 100% 90%;
+  background-size: auto;
+  width: 100%;
+  padding: 0 150px;
+}
+.content-google-map {
+  border: 5px solid var(--gold);
+  border-top-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+#googleMap {
+  height: 350px;
+  width: 100%;
+}
+/* END SECTION LOKASI */
+/* ------------------------------------------ */
+
+/* SECTION GALERI */
+.frame-video {
+  width: 70%;
+  height: 400px;
+}
+.container-video {
+  background-image: url("../images/illustations/bridal1.png"),
+    url("../images/illustations/bridal2-mirror.png");
+  background-repeat: no-repeat;
+  background-position: 10% 100%, 90% 0%;
+  background-size: auto;
+  width: 100%;
+  padding: 50px;
+  margin-top: 32px;
+}
+.container-galeri {
+  background-image: url("../images/illustations/bridal1.png"),
+    url("../images/illustations/bridal2.png");
+  background-repeat: no-repeat;
+  background-position: left bottom, right bottom;
+  background-size: auto;
+  width: 100%;
+}
+.gallery {
+  margin: 0 150px !important;
+}
+
+.gallery img {
+  /* aspect-ratio: 16/9; */
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+  padding-bottom: 20px;
+}
+.gallery img:hover {
+  transform: scale(1.1);
+}
+/* END SECTION GALERI */
+/* ------------------------------------------ */
+
+/* SECTION KISAH */
+.container-story {
+  padding: 50px 100px;
+}
+ul.timeline {
+  list-style-type: none;
+  position: relative;
+}
+ul.timeline:before {
+  content: " ";
+  background: var(--gold);
+  display: inline-block;
+  position: absolute;
+  left: 29px;
+  width: 2px;
+  height: 100%;
+  z-index: 400;
+}
+ul.timeline > li {
+  padding-left: 20px;
+  margin-bottom: 100px;
+  margin-left: 100px;
+}
+ul.timeline > .timeline-event-first:before {
+  content: " ";
+  background-image: url("../images/galeri/1.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  width: 200px;
+  height: 140px;
+  display: inline-block;
+  position: absolute;
+  margin-left: -90px;
+  left: 20px;
+  z-index: 400;
+}
+ul.timeline > .timeline-event-second:before {
+  content: " ";
+  background-image: url("../images/galeri/2.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  width: 200px;
+  height: 150px;
+  display: inline-block;
+  position: absolute;
+  margin-left: -90px;
+  left: 20px;
+  z-index: 400;
+}
+ul.timeline > .timeline-event-third:before {
+  content: " ";
+  background-image: url("../images/galeri/3.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  width: 200px;
+  height: 150px;
+  display: inline-block;
+  position: absolute;
+  margin-left: -90px;
+  left: 20px;
+  z-index: 400;
+}
+/* END SECTION KISAH */
+/* ------------------------------------------ */
+
+/* SECTION UCAPAN */
+.row-saying {
+  padding: 50px 100px;
+}
+.card {
+  background-color: var(--bg-color) !important;
+  /* height: 500px;
+  max-height: 500px; */
+}
+.card-footer {
+  border-top: 1px solid var(--border-color) !important;
+}
+.card-header {
+  border-bottom: 1px solid var(--border-color) !important;
+}
+.card-saying {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color) !important;
+  box-shadow: rgba(204, 133, 2, 0.071) 0px 10px 18px 0px;
+}
+.form-disabled {
+  background-color: #20342c !important;
+  border-color: #20342c !important;
+}
+.form-control-new {
+  background-color: #20342c !important;
+  color: #fff !important;
+  border-color: #20342c !important;
+}
+.form-select {
+  background-color: #20342c !important;
+  color: #fff !important;
+  border-color: #20342c !important;
+}
+.profileImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--gold);
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+}
+.comment-widgets::-webkit-scrollbar {
+  width: 2px !important;
+}
+
+.comment-widgets::-webkit-scrollbar-track {
+  background-color: black !important;
+}
+
+.comment-widgets::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px var(--gold) !important;
+}
+#textarea-pesan::-webkit-scrollbar {
+  width: 2px !important;
+}
+
+#textarea-pesan::-webkit-scrollbar-track {
+  background-color: black !important;
+}
+
+#textarea-pesan::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px var(--gold) !important;
+}
+.comment-widgets {
+  overflow: auto;
+  max-height: 400px;
+}
+/* END SECTION UCAPAN */
+/* ------------------------------------------ */
+
+/* SECTION HADIAH */
+.card-gift {
+  border-top-left-radius: 30%;
+  border-top-right-radius: 30%;
+  border: 1px solid var(--gold);
+  padding: 40px;
+  width: auto;
+  height: 100%;
+}
+
+.row-gift {
+  padding: 50px 120px;
+}
+
+.image-gift {
+  margin-bottom: 50px;
+}
+
+.icon-text {
+  margin-right: 5px;
+  margin-top: 2px;
+  width: fit-content;
+  height: max-content;
+}
+/* END SECTION HADIAH */
+
+/* RESPONSIVE */
+/* RESPONSIVE */
+@media (max-width: 320px) {
+  .dancing-text-head {
+    font-size: 18px;
+  }
+  .kurale-text {
+    font-size: 12px;
+  }
+  .center-illustration {
+    width: 100%;
+  }
+
+  .illustration5 {
+    width: 100%;
+    height: 300px;
+  }
+
+  .section-text-illustration5 {
+    padding: 50px !important;
+  }
+}
+@media (max-width: 575px) {
+  .vl {
+    display: none;
+  }
+  .illustration1,
+  .illustration2,
+  .illustration3,
+  .illustration4 {
+    width: 40% !important;
+    height: 40% !important;
+  }
+
+  .illustration5 {
+    width: 100%;
+    height: 300px;
+  }
+
+  .section-text-illustration5 {
+    padding: 50px !important;
+  }
+  .navigation-bar .list-items .item .link {
+    padding: 10px;
+    font-size: 16px;
+  }
+  .navigation-bar .list-items .item {
+    height: 2rem !important;
+  }
+
+  .menu-name {
+    display: none;
+  }
+
+  .music-button {
+    bottom: 80px !important;
+    left: 6% !important;
+  }
+
+  .dancing-text-head {
+    font-size: 24px !important;
+  }
+  .kurale-text {
+    font-size: 12px;
+    font-family: "Kurale";
+  }
+
+  .center-illustration {
+    width: 100%;
+  }
+  .section-text-illustration5 {
+    padding: 10px;
+  }
+
+  /* SECTION COUNTDOWN */
+  .header-countdown {
+    font-size: 20px !important;
+  }
+  .content-countdown {
+    font-size: 16px !important;
+  }
+  /* END SECTION COUNTDOWN */
+
+  /* SECTION UCAPAN */
+  .row-saying {
+    padding: 0 10px;
+  }
+  .comment-widgets {
+    overflow: auto;
+    max-height: 320px;
+  }
+  /* END SECTION UCAPAN */
+
+  /* SECTION BRIDAL */
+  .container-bridal {
+    background-image: none;
+    /* background-image: url("../images/illustations/bridal1.png"),
+      url("../images/illustations/bridal2.png");
+    background-repeat: no-repeat;
+    background-position: 0 20%, 95% 100% !important;
+    background-size: auto; */
+  }
+  /* END SECTION BRIDAL */
+
+  /* SECTION LOKASI */
+  .container-map {
+    background-image: none;
+    /* background-image: url("../images/illustations/template-6/8.png"),
+      url("../images/illustations/template-6/9.png");
+    background-repeat: no-repeat;
+    background-position: 0% 5%, 100% 95% !important;
+    background-size: 10px 10px; */
+    /* width: 100%; */
+    padding: 0 !important;
+  }
+  #googleMap {
+    height: 350px;
+    width: 100% !important;
+  }
+  /* END SECTION LOKASI */
+
+  /* SECTION GALERI */
+  .gallery {
+    margin: 0 !important;
+    padding: 0 20px !important;
+  }
+  /* END SECTION GALERI */
+
+  /* SECTION KISAH */
+  ul.timeline > .timeline-event-first:before {
+    width: 150px !important;
+    height: 100px !important;
+    margin-left: -50px !important;
+  }
+  ul.timeline > .timeline-event-second:before {
+    width: 150px !important;
+    height: 100px !important;
+    margin-left: -50px !important;
+  }
+  ul.timeline > .timeline-event-third:before {
+    width: 150px !important;
+    height: 100px !important;
+    margin-left: -50px !important;
+  }
+  ul.timeline > li {
+    margin-bottom: 50px !important;
+  }
+  .container-story {
+    padding: 50px 10px !important;
+  }
+  /* END SECTION KISAH */
+
+  /* SECTION HADIAH */
+  .card-gift {
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+    padding: 80px;
+  }
+
+  .row-gift {
+    margin: 20px !important;
+  }
+  /* END SECTION HADIAH */
+}
+
+@media (max-width: 625px) {
+  .dancing-text-head {
+    font-size: 34px !important;
+    font-family: "Dancing Script";
+  }
+  .menu-name {
+    display: none;
+  }
+  .kurale-text {
+    font-size: 14px !important;
+    font-family: "Kurale";
+  }
+  .illustration5 {
+    background-image: url("../images/illustations/5.png");
+    aspect-ratio: 16/9;
+    /* width: 320px !important;
+    height: 333.91px !important; */
+  }
+
+  /* SECTION BRIDAL */
+  .container-bridal {
+    background-image: none;
+  }
+  /* .container-bridal {
+    background-image: url("../images/illustations/bridal1.png"),
+      url("../images/illustations/bridal2.png");
+    background-repeat: no-repeat;
+    background-position: 0 20%, 95% 100% !important;
+    background-size: auto;
+  } */
+  /* END SECTION BRIDAL */
+}
+@media (max-width: 768px) {
+  .center-illustration {
+    width: 100%;
+  }
+
+  .illustration5 {
+    aspect-ratio: 16/9;
+  }
+  /* SECTION COUNTDOWN */
+  .container-countdown {
+    flex-wrap: wrap;
+    padding: 20px 0px;
+  }
+  .container-countdown > div {
+    margin: 1rem auto;
+    max-width: 100px;
+  }
+  .header-countdown {
+    font-size: 20px !important;
+  }
+  .content-countdown {
+    font-size: 16px !important;
+  }
+  /* END SECTION COUNTDOWN */
+  s
+  /* SECTION BRIDAL */
+  .container-bridal {
+    background-image: none;
+    /* background-image: url("../images/illustations/bridal1.png"),
+      url("../images/illustations/bridal2.png");
+    background-repeat: no-repeat;
+    background-position: 0 20%, 95% 100% !important;
+    background-size: auto; */
+  }
+  /* END SECTION BRIDAL */
+
+  /* SECTION LOKASI */
+  .container-map {
+    background-image: none;
+    /* background-image: url("../images/illustations/template-6/8.png"),
+      url("../images/illustations/template-6/9.png");
+    background-repeat: no-repeat;
+    background-position: 0% 5%, 100% 95% !important;
+    background-size: 10px 10px; */
+    /* width: 100%; */
+    padding: 0 !important;
+  }
+  #googleMap {
+    height: 350px;
+    width: 100% !important;
+  }
+  /* END SECTION LOKASI */
+
+  /* SECTION GALERI */
+  .gallery {
+    margin: 0 !important;
+    padding: 0 10px !important;
+  }
+  .frame-video {
+    width: 80% !important;
+    height: 200px;
+  }
+  .container-video {
+    background-image: url("../images/illustations/bridal1.png"),
+      url("../images/illustations/bridal2-mirror.png");
+    background-repeat: no-repeat;
+    background-position: 10% 100%, 100% 0%;
+    background-size: auto;
+    width: 100% !important;
+    padding: 0 !important;
+    margin-top: 32px;
+  }
+  /* END SECTION GALERI */
+
+  /* SECTION KISAH */
+  ul.timeline > .timeline-event-first:before {
+    width: 150px !important;
+    height: 100px !important;
+    margin-left: -60px !important;
+  }
+  ul.timeline > .timeline-event-second:before {
+    width: 150px !important;
+    height: 100px !important;
+    margin-left: -60px !important;
+  }
+  ul.timeline > .timeline-event-third:before {
+    width: 150px !important;
+    height: 100px !important;
+    margin-left: -60px !important;
+  }
+  ul.timeline > li {
+    margin-bottom: 50px !important;
+  }
+  .container-story {
+    padding: 50px 10px !important;
+  }
+  /* END SECTION KISAH */
+
+  /* SECTION HADIAH */
+  .card-gift {
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+    padding: 20px;
+  }
+
+  .row-gift {
+    padding: 0 !important;
+  }
+
+  .image-gift {
+    margin: 30px !important;
+  }
+  /* END SECTION HADIAH */
+}
+
+@media (max-width: 905px) {
+  /* SECTION UCAPAN */
+  .row-saying {
+    padding: 0 !important;
+  }
+  .comment-widgets {
+    overflow: auto;
+    max-height: 320px;
+  }
+  /* END SECTION UCAPAN */
+  .section-bridal-left {
+    justify-content: center;
+  }
+  .section-bridal-center {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .section-bridal-right {
+    justify-content: center;
+  }
+
+  .dancing-text-head {
+    font-size: 44px;
+    font-family: "Dancing Script";
+  }
+  .kurale-text {
+    font-size: 14px;
+    font-family: "Kurale";
+  }
+
+  .illustration1,
+  .illustration2,
+  .illustration3,
+  .illustration4 {
+    width: 40%;
+    height: 40%;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+  .illustration1,
+  .illustration2,
+  .illustration3,
+  .illustration4 {
+    width: 30%;
+    height: 30%;
+  }
+  .center-illustration {
+    width: 80%;
+  }
+
+  .illustration5 {
+    aspect-ratio: 16/9;
+  }
+  /* SECTION UCAPAN */
+  .row-saying {
+    padding: 0 !important;
+  }
+  .comment-widgets {
+    overflow: auto;
+    max-height: 350px;
+  }
+
+  .music-button {
+    bottom: 40px !important;
+    left: 1% !important;
+  }
+  /* END SECTION UCAPAN */
+
+  /* SECTION BRIDAL */
+  .container-bridal {
+    background-image: url("../images/illustations/bridal1.png"),
+      url("../images/illustations/bridal2.png");
+    background-repeat: no-repeat;
+    background-position: -10% 80%, 110% 80% !important;
+    background-size: auto;
+  }
+  /* END SECTION BRIDAL */
+
+  /* SECTION LOKASI */
+  .container-map {
+    background-image: none;
+    /* background-image: url("../images/illustations/template-6/8.png"),
+      url("../images/illustations/template-6/9.png");
+    background-repeat: no-repeat;
+    background-position: 0% 5%, 100% 95% !important;
+    background-size: 10px 10px; */
+    /* width: 100%; */
+    padding: 0 !important;
+  }
+  #googleMap {
+    height: 350px;
+    width: 100% !important;
+  }
+  /* END SECTION LOKASI */
+  /* SECTION GALERI */
+  .gallery {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .frame-video {
+    width: 80% !important;
+    height: 400px;
+  }
+  .container-video {
+    background-image: url("../images/illustations/bridal1.png"),
+      url("../images/illustations/bridal2-mirror.png");
+    background-repeat: no-repeat;
+    background-position: -10% 100%, 110% 0%;
+    background-size: auto;
+    width: 100% !important;
+    padding: 10px !important;
+    margin-top: 32px;
+  }
+  /* END SECTION GALERI */
+
+  /* SECTION KISAH */
+  ul.timeline > .timeline-event-first:before {
+    width: 150px !important;
+    height: 100px !important;
+    margin-left: -60px !important;
+  }
+  ul.timeline > .timeline-event-second:before {
+    width: 150px !important;
+    height: 100px !important;
+    margin-left: -60px !important;
+  }
+  ul.timeline > .timeline-event-third:before {
+    width: 150px !important;
+    height: 100px !important;
+    margin-left: -60px !important;
+  }
+  ul.timeline > li {
+    margin-bottom: 50px !important;
+  }
+  .container-story {
+    padding: 50px 10px !important;
+  }
+  /* END SECTION KISAH */
+  /* SECTION HADIAH */
+  .card-gift {
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+    padding: 20px;
+  }
+
+  .row-gift {
+    padding: 0 !important;
+  }
+
+  .image-gift {
+    margin: 50px !important;
+  }
+  /* END SECTION HADIAH */
+
+  /* SECTION COUNTDOWN */
+  .container-countdown {
+    flex-wrap: wrap;
+  }
+  .container-countdown > div {
+    margin: 1rem 1rem;
+  }
+  .header-countdown {
+    font-size: 24px !important;
+  }
+  .content-countdown {
+    font-size: 20px !important;
+  }
+  /* END SECTION COUNTDOWN */
+}
+
+@media (max-width: 1198px) and (min-width: 992px) {
+  /* SECTION UCAPAN */
+  .row-saying {
+    padding: 0 !important;
+  }
+  .music-button {
+    bottom: 40px !important;
+    left: 1% !important;
+  }
+  .comment-widgets {
+    overflow: auto;
+    max-height: 400px;
+  }
+  /* END SECTION UCAPAN */
+
+  /* SECTION BRIDAL */
+  .container-bridal {
+    background-image: url("../images/illustations/bridal1.png"),
+      url("../images/illustations/bridal2.png");
+    background-repeat: no-repeat;
+    background-position: 10% 80%, 90% 80%;
+    background-size: auto;
+  }
+  .illustration-bridal-left {
+    background-position: left;
+    background-position-x: 0;
+  }
+  .illustration-bridal-right {
+    background-position: right;
+    background-position-x: 100%;
+  }
+  /* END SECTION BRIDAL */
+
+  /* SECTION LOKASI */
+  .container-map {
+    background-image: none;
+    /* background-image: url("../images/illustations/template-6/8.png"),
+      url("../images/illustations/template-6/9.png");
+    background-repeat: no-repeat;
+    background-position: 0% 5%, 100% 95% !important;
+    background-size: 10px 10px; */
+    /* width: 100%; */
+    padding: 0 !important;
+  }
+  #googleMap {
+    height: 350px;
+    width: 100% !important;
+  }
+  /* END SECTION LOKASI */
+
+  /* SECTION GALERI */
+  .gallery {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .frame-video {
+    width: 70% !important;
+    height: 400px;
+  }
+  .container-video {
+    background-image: url("../images/illustations/bridal1.png"),
+      url("../images/illustations/bridal2-mirror.png");
+    background-repeat: no-repeat;
+    background-position: 0% 100%, 100% 0%;
+    background-size: auto;
+    width: 100% !important;
+    padding: 10px !important;
+    margin-top: 32px;
+  }
+  /* END SECTION GALERI */
+
+  /* SECTION KISAH */
+  ul.timeline > .timeline-event-first:before {
+    width: 150px !important;
+    height: 100px !important;
+    margin-left: -60px !important;
+  }
+  ul.timeline > .timeline-event-second:before {
+    width: 150px !important;
+    height: 100px !important;
+    margin-left: -60px !important;
+  }
+  ul.timeline > .timeline-event-third:before {
+    width: 150px !important;
+    height: 100px !important;
+    margin-left: -60px !important;
+  }
+  ul.timeline > li {
+    margin-bottom: 50px !important;
+  }
+  .container-story {
+    padding: 50px 10px !important;
+  }
+  /* END SECTION KISAH */
+  /* SECTION HADIAH */
+  .card-gift {
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+    padding: 20px;
+  }
+
+  .row-gift {
+    padding: 0 !important;
+  }
+
+  .image-gift {
+    margin: 30px !important;
+  }
+  /* END SECTION HADIAH */
+
+  /* SECTION COUNTDOWN */
+  .header-countdown {
+    font-size: 24px !important;
+  }
+  .content-countdown {
+    font-size: 20px !important;
+  }
+  /* END SECTION COUNTDOWN */
+}
+/* END RESPONSIVE */

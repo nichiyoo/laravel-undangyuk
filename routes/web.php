@@ -8,6 +8,7 @@ Auth::routes();
 Route::get('/', fn() => view('index'))->name('landing');
 Route::get('/contact', [App\Http\Controllers\MessageController::class, 'create'])->name('contact.create');
 Route::post('/contact', [App\Http\Controllers\MessageController::class, 'store'])->name('contact.store');
+Route::get('/invitations/{invitation}', [App\Http\Controllers\InvitationController::class, 'show'])->name('invitations.show');
 
 Route::get('/dashboard', function () {
   $user = Auth::user();

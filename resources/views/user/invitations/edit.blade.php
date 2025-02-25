@@ -17,7 +17,7 @@
 
     <div class="row justify-content-center">
       <form class="col-md-8 d-flex flex-column gap-3" action="{{ route('user.invitations.update', $invitation) }}"
-        method="POST">
+        method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
@@ -43,21 +43,39 @@
 
         <div class="row mb-3">
           <div class="col-md-6">
-            <label for="bride_parent_name" class="form-label">Bride's Parent Name</label>
-            <input type="text" class="form-control @error('bride_parent_name') is-invalid @enderror"
-              id="bride_parent_name" name="bride_parent_name"
-              value="{{ old('bride_parent_name', $invitation->bride_parent_name) }}" required>
-            @error('bride_parent_name')
+            <label for="bride_fullname" class="form-label">Bride Fullname</label>
+            <input type="text" class="form-control @error('bride_fullname') is-invalid @enderror" id="bride_fullname"
+              name="bride_fullname" value="{{ old('bride_fullname', $invitation->bride_fullname) }}" required>
+            @error('bride_fullname')
               <div class="invalid-feedback">{{ $message }}</div>
             @enderror
           </div>
 
           <div class="col-md-6">
-            <label for="groom_parent_name" class="form-label">Groom's Parent Name</label>
-            <input type="text" class="form-control @error('groom_parent_name') is-invalid @enderror"
-              id="groom_parent_name" name="groom_parent_name"
-              value="{{ old('groom_parent_name', $invitation->groom_parent_name) }}" required>
-            @error('groom_parent_name')
+            <label for="groom_fullname" class="form-label">Groom Fullname</label>
+            <input type="text" class="form-control @error('groom_fullname') is-invalid @enderror" id="groom_fullname"
+              name="groom_fullname" value="{{ old('groom_fullname', $invitation->groom_fullname) }}" required>
+            @error('groom_fullname')
+              <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="bride_parent" class="form-label">Bride's Parent Name</label>
+            <input type="text" class="form-control @error('bride_parent') is-invalid @enderror" id="bride_parent"
+              name="bride_parent" value="{{ old('bride_parent', $invitation->bride_parent) }}" required>
+            @error('bride_parent')
+              <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+          </div>
+
+          <div class="col-md-6">
+            <label for="groom_parent" class="form-label">Groom's Parent Name</label>
+            <input type="text" class="form-control @error('groom_parent') is-invalid @enderror" id="groom_parent"
+              name="groom_parent" value="{{ old('groom_parent', $invitation->groom_parent) }}" required>
+            @error('groom_parent')
               <div class="invalid-feedback">{{ $message }}</div>
             @enderror
           </div>
@@ -94,10 +112,48 @@
         </div>
 
         <div class="mb-3">
+          <label for="address" class="form-label">Address</label>
+          <input type="text" class="form-control @error('address') is-invalid @enderror" id="address"
+            name="address" value="{{ old('address', $invitation->address) }}" required>
+          @error('address')
+            <div class="invalid-feedback">{{ $message }}</div>
+          @enderror
+        </div>
+
+        <div class="mb-3">
+          <label for="video" class="form-label">Video</label>
+          <input type="text" class="form-control @error('video') is-invalid @enderror" id="video"
+            name="video" value="{{ old('video', $invitation->video) }}" required>
+          @error('video')
+            <div class="invalid-feedback">{{ $message }}</div>
+          @enderror
+        </div>
+
+        <div class="mb-3">
           <label for="theme" class="form-label">Theme</label>
-          <input type="text" class="form-control @error('theme') is-invalid @enderror" id="theme" name="theme"
-            value="{{ old('theme', $invitation->theme) }}" required>
+          <select class="form-select @error('theme') is-invalid @enderror" id="theme" name="theme" required>
+            <option value="tema-1" @if ($invitation->theme == 'tema-1') selected @endif>Tema 1</option>
+            <option value="tema-2" @if ($invitation->theme == 'tema-2') selected @endif>Tema 2</option>
+          </select>
           @error('theme')
+            <div class="invalid-feedback">{{ $message }}</div>
+          @enderror
+        </div>
+
+        <div class="mb-3">
+          <label for="bride_photo" class="form-label">Foto Bride</label>
+          <input type="file" class="form-control @error('bride_photo') is-invalid @enderror" id="bride_photo"
+            name="bride_photo" accept="image/*">
+          @error('bride_photo')
+            <div class="invalid-feedback">{{ $message }}</div>
+          @enderror
+        </div>
+
+        <div class="mb-3">
+          <label for="groom_photo" class="form-label">Foto Groom</label>
+          <input type="file" class="form-control @error('groom_photo') is-invalid @enderror" id="groom_photo"
+            name="groom_photo" accept="image/*">
+          @error('groom_photo')
             <div class="invalid-feedback">{{ $message }}</div>
           @enderror
         </div>
