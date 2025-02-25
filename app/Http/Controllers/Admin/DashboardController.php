@@ -23,7 +23,7 @@ class DashboardController extends Controller
       },
       [
         [
-          'route' => "#",
+          'route' => route('admin.users.index'),
           'name' => 'Pengguna',
           'count' => User::count(),
           'unit' => 'data',

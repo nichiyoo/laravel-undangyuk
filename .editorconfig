@@ -1,4 +1,12 @@
-Microsoft Windows [Version 10.0.26100.2894]
-(c) Microsoft Corporation. All rights reserved.
+# EditorConfig is awesome: https://EditorConfig.org
 
-C:\Users\hiday\Herd\laravel-undangyuk>
+# top-most EditorConfig file
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = crlf
+charset = utf-8
+trim_trailing_whitespace = false
+insert_final_newline = false

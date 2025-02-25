@@ -49,7 +49,7 @@
 <body>
   <x-navbar />
 
-  <main style="padding-top: 10rem; padding-bottom: 10rem; min-height: 70vh;">
+  <main style="padding-top: 10rem; padding-bottom: 10rem; min-height: 80vh;">
     @yield('content')
   </main>
 

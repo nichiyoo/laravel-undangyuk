@@ -41,7 +41,7 @@
     <div class="row mb-4">
       @foreach ($counts as $count)
         <a href="{{ $count->route }}" class="col-md-4 mb-4">
-          <div class="card">
+          <div class="card rounded-4">
             <div class="card-body">
               <h5 class="fw-semibold">{{ $count->name }}</h5>
               <span class="text-primary-dark">{{ $count->count }} {{ $count->unit }}</span>
@@ -53,7 +53,7 @@
 
     <div class="row">
       <div class="col-12 col-lg-6 mb-4">
-        <div class="card">
+        <div class="card rounded-4">
           <div class="card-body p-0">
             <h5 class="card-title px-3 py-2 pt-3">Pesan Terakhir</h5>
             <div class="card-body p-0 mt-0">
@@ -85,7 +85,7 @@
       </div>
 
       <div class="col-12 col-lg-6 mb-4">
-        <div class="card">
+        <div class="card rounded-4">
           <div class="card-body p-0">
             <h5 class="card-title px-3 py-2 pt-3">Pesanan Undangan Terakhir</h5>
             <div class="card-body p-0 mt-0">

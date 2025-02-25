@@ -6,8 +6,8 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', fn() => view('index'))->name('landing');
-Route::get('/contact', [App\Http\Controllers\MessageController::class, 'create'])->name('contact.create');
-Route::post('/contact', [App\Http\Controllers\MessageController::class, 'store'])->name('contact.store');
+Route::get('/contact', [App\Http\Controllers\Admin\MessageController::class, 'create'])->name('contact.create');
+Route::post('/contact', [App\Http\Controllers\Admin\MessageController::class, 'store'])->name('contact.store');
 
 
 Route::get('/dashboard', function () {
@@ -29,6 +29,7 @@ Route::middleware(['auth', 'role:admin'])
   ->as('admin.')
   ->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
-    Route::resource('messages', App\Http\Controllers\MessageController::class)->except('edit', 'update');
+    Route::resource('users', App\Http\Controllers\Admin\UserController::class)->only('index');
+    Route::resource('messages', App\Http\Controllers\Admin\MessageController::class)->except('edit', 'update');
     Route::resource('invitations', App\Http\Controllers\Admin\InvitationController::class)->except('create', 'store');
   });
