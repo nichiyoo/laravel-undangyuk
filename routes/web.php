@@ -21,6 +21,8 @@ Route::middleware(['auth'])
   ->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
     Route::get('/invitations/{invitation}/success', [App\Http\Controllers\InvitationController::class, 'success'])->name('invitations.success');
+    Route::get('/invitations/{invitation}/payment', [App\Http\Controllers\InvitationController::class, 'payment'])->name('invitations.payment');
+    Route::post('/invitations/{invitation}/complete', [App\Http\Controllers\InvitationController::class, 'complete'])->name('invitations.complete');
     Route::resource('invitations', App\Http\Controllers\InvitationController::class);
   });
 
@@ -29,6 +31,8 @@ Route::middleware(['auth', 'role:admin'])
   ->as('admin.')
   ->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+    Route::put('/invitations/{invitation}/verify', [App\Http\Controllers\Admin\InvitationController::class, 'verify'])->name('invitations.verify');
+    Route::put('/invitations/{invitation}/cancel', [App\Http\Controllers\Admin\InvitationController::class, 'cancel'])->name('invitations.cancel');
     Route::resource('users', App\Http\Controllers\Admin\UserController::class)->only('index');
     Route::resource('messages', App\Http\Controllers\Admin\MessageController::class)->except('edit', 'update');
     Route::resource('invitations', App\Http\Controllers\Admin\InvitationController::class)->except('create', 'store');

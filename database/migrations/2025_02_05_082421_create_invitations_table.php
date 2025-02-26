@@ -27,6 +27,8 @@ return new class extends Migration
       $table->string('address');
       $table->string('video');
       $table->string('theme');
+      $table->enum('status', ['pending', 'paid', 'published', 'cancelled'])->default('pending');
+      $table->string('receipt')->nullable();
       $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
       $table->timestamps();
     });

@@ -17,7 +17,7 @@
     @endif
 
     <div class="rounded-4 overflow-hidden border border-bottom-0 mb-4">
-      <table class="table mb-0">
+      <table class="table mb-0 align-middle">
         <thead class="table-dark">
           <tr>
             <th class="fw-medium px-4 py-3">ID</th>
@@ -25,8 +25,8 @@
             <th class="fw-medium px-4 py-3">Groom</th>
             <th class="fw-medium px-4 py-3">Date</th>
             <th class="fw-medium px-4 py-3">Location</th>
-            <th class="fw-medium px-4 py-3">Time</th>
             <th class="fw-medium px-4 py-3">Theme</th>
+            <th class="fw-medium px-4 py-3">Status</th>
             <th class="fw-medium px-4 py-3">Actions</th>
           </tr>
         </thead>
@@ -38,8 +38,12 @@
               <td class="px-4 py-3">{{ $invitation->groom_name }}</td>
               <td class="px-4 py-3">{{ $invitation->date->format('F d, Y') }}</td>
               <td class="px-4 py-3">{{ $invitation->location }}</td>
-              <td class="px-4 py-3">{{ $invitation->time }}</td>
               <td class="px-4 py-3">{{ $invitation->theme }}</td>
+              <td class="px-4 py-3">
+                <span class="badge text-uppercase @if ($invitation->status === 'cancelled') bg-danger @else bg-success @endif">
+                  {{ $invitation->status }}
+                </span>
+              </td>
               <td class="px-4 py-3 d-flex justify-items-center gap-2">
                 <a href="{{ route('user.invitations.show', $invitation) }}" class="btn rounded-pill btn-light">View</a>
                 <a href="{{ route('user.invitations.edit', $invitation) }}" class="btn rounded-pill btn-light">Edit</a>

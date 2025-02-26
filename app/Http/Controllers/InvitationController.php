@@ -26,6 +26,7 @@ class InvitationController extends Controller
     'groom_photo' => ['required', 'image'],
   ];
 
+
   /**
    * Display a listing of the resource.
    */
@@ -89,10 +90,66 @@ class InvitationController extends Controller
   }
 
   /**
+   * Show the payment page.
+   */
+  public function payment(Invitation $invitation)
+  {
+    $user = Auth::user();
+    if ($invitation->user_id != $user->id) return abort(403);
+    if ($invitation->status !== 'pending') return abort(404);
+
+    return view('user.invitations.payment', [
+      'invitation' => $invitation,
+    ]);
+  }
+
+  /**
+   * Complete the payment.
+   */
+  public function complete(Invitation $invitation, Request $request)
+  {
+    $user = Auth::user();
+    if ($invitation->user_id != $user->id) return abort(403);
+    if ($invitation->status !== 'pending') return abort(404);
+
+    $request->validate([
+      'receipt' => ['required', 'image'],
+    ]);
+
+    $file = $request->file('receipt');
+    $filename = 'receipt-' . time() . '.' . $file->getClientOriginalExtension();
+    Storage::disk('public')->put($filename, $file->get());
+
+    $invitation->receipt = $filename;
+    $invitation->status = 'paid';
+    $invitation->save();
+
+    session()->flash('success', 'Undangan berhasil diupdate!');
+
+    return view('user.invitations.complete', [
+      'invitation' => $invitation,
+    ]);
+  }
+
+  /**
    * Display the specified resource.
    */
   public function show(Invitation $invitation, Request $request)
   {
+    if ($invitation->status === 'pending') {
+      return view('user.invitations.payment', [
+        'invitation' => $invitation,
+      ]);
+    }
+
+    if ($invitation->status === 'paid') {
+      return view('user.invitations.complete', [
+        'invitation' => $invitation,
+      ]);
+    }
+
+    if ($invitation->status === 'cancelled') return abort(404);
+
     $recipient = $request->get('to');
     $theme = $invitation->theme;
 
@@ -156,6 +213,7 @@ class InvitationController extends Controller
 
     Storage::disk('public')->delete($invitation->groom_photo);
     Storage::disk('public')->delete($invitation->bride_photo);
+    if ($invitation->receipt) Storage::disk('public')->delete($invitation->receipt);
 
     $invitation->delete();
     session()->flash('success', 'Undangan berhasil dihapus!');

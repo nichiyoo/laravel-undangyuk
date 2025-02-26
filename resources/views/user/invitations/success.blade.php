@@ -14,7 +14,7 @@
 
 
     <a href="{{ route('user.invitations.show', $invitation) }}" class="w-full mb-4">
-      <button class="link-primary-nav w-full">
+      <button class="link-primary-nav">
         Link Undangan Anda!
       </button>
     </a>

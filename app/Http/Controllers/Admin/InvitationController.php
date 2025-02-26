@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Mail\InvitationVerified;
 use App\Models\Invitation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
 class InvitationController extends Controller
@@ -92,12 +94,38 @@ class InvitationController extends Controller
   }
 
   /**
+   * Verify the payment.
+   */
+  public function verify(Invitation $invitation)
+  {
+    $invitation->status = 'published';
+    $invitation->save();
+    Mail::to($invitation->user)->send(new InvitationVerified($invitation));
+    session()->flash('success', 'Undangan berhasil diupdate!');
+
+    return redirect()->route('admin.invitations.index');
+  }
+
+  /**
+   * Cancel the payment.
+   */
+  public function cancel(Invitation $invitation)
+  {
+    $invitation->status = 'cancelled';
+    $invitation->save();
+    session()->flash('success', 'Undangan berhasil diupdate!');
+
+    return redirect()->route('admin.invitations.index');
+  }
+
+  /**
    * Remove the specified resource from storage.
    */
   public function destroy(Invitation $invitation)
   {
     Storage::disk('public')->delete($invitation->groom_photo);
     Storage::disk('public')->delete($invitation->bride_photo);
+    if ($invitation->receipt) Storage::disk('public')->delete($invitation->receipt);
 
     $invitation->delete();
     session()->flash('success', 'Undangan berhasil dihapus!');

@@ -17,7 +17,7 @@
     @endif
 
     <div class="rounded-4 overflow-hidden border border-bottom-0 mb-4">
-      <table class="table mb-0">
+      <table class="table mb-0 align-middle">
         <thead class="table-dark">
           <tr>
             <th class="fw-medium px-4 py-3">Name</th>
